@@ -1,7 +1,7 @@
 # Taxi-Database-System-Design
 University of Toronto 
 
-CSC343: Introduction to Database - Assignment 2
+CSC343: Introduction to Database - Fall 2022
 
 Professor: Diane Horton
 

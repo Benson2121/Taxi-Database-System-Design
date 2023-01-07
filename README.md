@@ -10,10 +10,15 @@ Professor: Diane Horton
 The purpose of this assignment is to give you practise writing complex stand-alone SQL queries, experience using psycopg2 to embed SQL queries in a Python program, and a sense of why a blend of SQL and a general-purpose language can be the best solution for some problems.
 
 By the end of this assignment you will be able to:
+
 • read and interpret a novel schema written in SQL
+
 • write complex queries in SQL
+
 • design datasets to test a SQL query thoroughly
+
 • quickly find and understand needed information in the postgreSQL documentation • embed SQL in a high-level language using psycopg2 and Python
+
 • recognize limits to the expressive power of standard SQL Please read this assignment thoroughly before you proceed.
 
 # Introduction

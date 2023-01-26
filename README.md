@@ -17,7 +17,9 @@ By the end of this assignment you will be able to:
 
 • design datasets to test a SQL query thoroughly
 
-• quickly find and understand needed information in the postgreSQL documentation • embed SQL in a high-level language using psycopg2 and Python
+• quickly find and understand needed information in the postgreSQL documentation 
+
+• embed SQL in a high-level language using psycopg2 and Python
 
 • recognize limits to the expressive power of standard SQL Please read this assignment thoroughly before you proceed.
 

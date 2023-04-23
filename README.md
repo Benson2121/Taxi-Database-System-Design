@@ -242,7 +242,8 @@ For Part 2 of this project, you will write several methods that the app would ne
 - Your methods should do only what the docstring comments say to do. In some cases there are other things that might have made sense to do but that we did not specify (in order to simplify your work). Don’t do those extra things.
 
 ### Tasks
-Complete the following methods in the starter code in part2.py:
+
+Complete the following methods in the starter code in Embedded_SQL.py
 
 1. clock in: A method that would be called when the driver declares that they are ready to start a shift.
 2. pick up: A method that would be called when the driver declares that they have picked up a client.

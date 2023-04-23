@@ -37,23 +37,23 @@ These queries are quite complex, and we have tried to specify them precisely. If
 
 Design your queries with the following in mind:
 
- • When we say that a client had a ride, or a driver gave a ride we mean that the ride was completed, that is, it has gone from request through to drop-off.
+ 1. When we say that a client had a ride, or a driver gave a ride we mean that the ride was completed, that is, it has gone from request through to drop-off.
  
- • The date of a ride is the date on which it was requested. (The drop-off might have a later date if the ride began just before midnight, for example.) Similarly, the month of a ride and the year of a ride are determined by the date on which it was requested.
+ 2. The date of a ride is the date on which it was requested. (The drop-off might have a later date if the ride began just before midnight, for example.) Similarly, the month of a ride and the year of a ride are determined by the date on which it was requested.
  
- • When we refer to a month we mean a specific month and year combination, such as January 2022, rather than just January.
+ 3. When we refer to a month we mean a specific month and year combination, such as January 2022, rather than just January.
 
- • We will assume the following constraints hold:
+ 4. We will assume the following constraints hold:
 
-     – The end time of a shift is after its start time.
+ 5. The end time of a shift is after its start time. 
+  
+    – A shift will have at least one row in table Location, recorded at the start of the shift, and it may have more. Each additional row for a shift indicates an updated location for the driver, and will have a datetime that occurs between the shift start time and the shift end time (inclusive).
 
-     – A shift will have at least one row in table Location, recorded at the start of the shift, and it may have more. Each additional row for a shift indicates an updated location for the driver, and will have a datetime that occurs between the shift start time and the shift end time (inclusive).
+    – The request, dispatch, pickup and dropoff for any given ride occur in that order in time, and each step is after (not at the same time) as the one before.
 
-     – The request, dispatch, pickup and dropoff for any given ride occur in that order in time, and each step is after (not at the same time) as the one before.
+    – No dispatch can be recorded for a driver while they have another ride that has not been completed.
 
-     – No dispatch can be recorded for a driver while they have another ride that has not been completed.
-
-     – No ride request can be recorded for a client if they have another ride request that has not lead to a completed ride. If it weren’t costly to enforce these restrictions, we would express them as constraints.
+    – No ride request can be recorded for a client if they have another ride request that has not lead to a completed ride. If it weren’t costly to enforce these restrictions, we would express them as constraints.
 
 # Part 2: Embedded SQL
 

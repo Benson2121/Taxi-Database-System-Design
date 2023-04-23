@@ -142,7 +142,7 @@ services.
     - request_id integer PRIMARY KEY REFERENCES Dropoff,
     - rating integer NOT NULL
 
-## Part 1: SQL Queries General requirements
+## Part 1: SQL Queries
 
 To ensure that your query results match the form expected by the autotester (attribute types and order, for instance), We are providing a schema for the result of each query. These can be found in files q1.sql, q2.sql, . . . , q10.sql. You must add your solution code for each query to the corresponding file. Make sure that each file is entirely self-contained, and does not depend on any other files; each will be run separately on a fresh database instance, and so (for example) any views you create in q1.sql will not be accessible in q5.sql.
 

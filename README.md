@@ -46,9 +46,13 @@ Design your queries with the following in mind:
  • We will assume the following constraints hold:
 
   – The end time of a shift is after its start time.
+
   – A shift will have at least one row in table Location, recorded at the start of the shift, and it may have more. Each additional row for a shift indicates an updated location for the driver, and will have a datetime that occurs between the shift start time and the shift end time (inclusive).
+
   – The request, dispatch, pickup and dropoff for any given ride occur in that order in time, and each step is after (not at the same time) as the one before.
+
   – No dispatch can be recorded for a driver while they have another ride that has not been completed.
+
   – No ride request can be recorded for a client if they have another ride request that has not lead to a completed ride. If it weren’t costly to enforce these restrictions, we would express them as constraints.
 
 # Part 2: Embedded SQL

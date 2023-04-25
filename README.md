@@ -227,18 +227,32 @@ Write SQL queries for each of the following:
 
 ## Part 2: Embedded SQL
 
-Imagine an Uber app that drivers, passengers and dispatchers log in to. The different kinds of users have different features available. The app has a graphical user-interface and is written in Python, but ultimately it has to connect to the database where the core data is stored. Some of the features will be implemented by Python methods that are merely a wrapper around a SQL query, allowing input to come from gestures the user makes on the app, like button clicks, and output to go to the screen via the graphical user-interface. Other app features will include computation that can’t be done, or can’t be done conveniently, in SQL.
+Imagine an Uber app that drivers, passengers and dispatchers log in to. The different kinds of users have different features available. The app has a graphical user-interface and is written in Python, but ultimately it has to connect to the database where the core data is stored. 
+
+Some of the features will be implemented by Python methods that are merely a wrapper around a SQL query, allowing input to come from gestures the user makes on the app, like button clicks, and output to go to the screen via the graphical user-interface. Other app features will include computation that can’t be done, or can’t be done conveniently, in SQL.
 
 For Part 2 of this project, you will write several methods that the app would need. It would need many more, but we’ll restrict ourselves to just enough to give you practise with psycopg2 and to demonstrate the need to get Python involved, not only because it can provide a nicer user-interface than postgreSQL, but because of the expressive power of Python.
 
 ### General Requirements
 
 - The methods we have asked you to write (clock_in, pick_up, and dispatch), and any helper methods they call, must not take input from the user or from a file. Doing so will result in the autotester timing out, causing you to receive a zero on that method. You can take input from the user in your main block and testing functions.
+
+
 - Do not change any of the code provided. In particular, you may not change the header of any of the methods we’ve asked you to implement. Each method must have a try-except clause so that it cannot possibly throw an exception.
+
+
 - You have been provided with methods called connect() and disconnect() that allow you to respectively connect to and disconnect from the database. You must NOT make any modifications to either method. You should also not modify the private method register geo loc().
+
+
 - You should NOT call connect() and disconnect() in the other methods we ask you to implement; you can assume that they will be called before and after, respectively, any other method calls.
+
+
 - You are welcome to write helper methods to maintain good code quality.
+
+
 - Within any of your methods, you are welcome to define views to break your task into steps. Drop those views before the method returns, or otherwise a subsequent call to the method will raise an error when it tries to define a view that already exists. Alternatively, you can declare your view as temporary so that it is dropped automatically once the connection is closed. The syntax for this is CREATE TEMPORARY VIEW name AS ...
+
+
 - Your methods should do only what the docstring comments say to do. In some cases there are other things that might have made sense to do but that we did not specify (in order to simplify your work). Don’t do those extra things.
 
 ### Tasks
@@ -246,7 +260,11 @@ For Part 2 of this project, you will write several methods that the app would ne
 Complete the following methods in the starter code in Embedded_SQL.py
 
 1. clock in: A method that would be called when the driver declares that they are ready to start a shift.
+
+
 2. pick up: A method that would be called when the driver declares that they have picked up a client.
+
+
 3. dispatch: A method that would be called when the dispatcher chooses to dispatch drivers in response to clients’ ride requests within a geographical area.
 
 
